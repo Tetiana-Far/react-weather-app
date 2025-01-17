@@ -1,4 +1,34 @@
+:root {
+  --primary-color: #272142;
+  --secondary-color: #7f7d9c;
+}
+.Weather {
+  padding: 40px;
+  border: solid 1px var(--secondary-color);
+  border-radius: 4px;
+}
 .Weather h1 {
-  color: #272142;
-  font-size: 38 px;
+  color: var(--primary-color);
+  font-size: 38px;
+  font-weight: 700;
+}
+.Weather form {
+  margin-bottom: 60px;
+}
+.Weather p {
+  margin-bottom: 1px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+.Weather .temperature {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 80px;
+}
+.Weather .unit {
+  color: var(--primary-color);
+  font-size: 28px;
+  position: relative;
+  bottom: 40px;
 }

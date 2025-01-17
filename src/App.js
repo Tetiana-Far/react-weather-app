@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <footer className="mt-3">
+        <footer className="mt-3 text-center">
           <p>
             This project was coded by <a href="/">Tetiana Farafonova</a>, is{" "}
             <a href="/">open-sourced on GitHub</a> and{" "}

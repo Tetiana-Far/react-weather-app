@@ -1,6 +1,6 @@
-.App {
-  text-align: center;
-}
 .App .container {
   max-width: 800px;
+}
+.App footer a {
+  text-decoration: none;
 }

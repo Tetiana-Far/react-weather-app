@@ -26,14 +26,12 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <h1>Kyiv</h1>
-          <ul>
-            <li>Friday 21:10, overcast clouds</li>
-            <li>Humidity: 94%, Wind: 0.89km/h</li>
-          </ul>
+          <p>Friday 21:10, overcast clouds</p>
+          <p>Humidity: 94%, Wind: 0.89km/h</p>
         </div>
-        <div className="col-6">
+        <div className="col-6 text-end">
           <span className="temperature">3</span>
-          <span className="degree">°C</span>
+          <span className="unit">°C</span>
         </div>
       </div>
     </div>
