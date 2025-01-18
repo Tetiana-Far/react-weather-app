@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -33,6 +34,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
+      icon: response.data.condition.icon,
     });
   }
   if (weatherInfo.loaded) {
@@ -70,6 +72,7 @@ export default function Weather(props) {
             </p>
           </div>
           <div className="col-6 text-end">
+            <WeatherIcon name={weatherInfo.icon} />
             <span className="temperature">
               {Math.round(weatherInfo.temperature)}
             </span>
