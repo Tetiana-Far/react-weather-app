@@ -4,6 +4,7 @@ import "./Weather.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -61,7 +62,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <div className="row">
+        <div className="row mb-4">
           <div className="col-6">
             <h1>{weatherInfo.city}</h1>
             <p>
@@ -72,11 +73,12 @@ export default function Weather(props) {
               Humidity: {weatherInfo.humidity}%, Wind: {weatherInfo.wind} km/h
             </p>
           </div>
-          <div className="col-6 text-end">
-            <WeatherIcon name={weatherInfo.icon} />
+          <div className="col-6 text-end m">
+            <WeatherIcon name={weatherInfo.icon} size={62} />
             <Temperature celsius={weatherInfo.temperature} />
           </div>
         </div>
+        <Forecast city={weatherInfo.city} />
       </div>
     );
   } else {
