@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
-import Temperature from "./Temperature";
 import Forecast from "./Forecast";
 
 export default function Weather(props) {
@@ -75,7 +74,10 @@ export default function Weather(props) {
           </div>
           <div className="col-6 text-end m">
             <WeatherIcon name={weatherInfo.icon} size={62} />
-            <Temperature celsius={weatherInfo.temperature} />
+            <span className="temperature">
+              {Math.round(weatherInfo.temperature)}
+            </span>
+            <span className="unit">°C</span>
           </div>
         </div>
         <Forecast city={weatherInfo.city} />
