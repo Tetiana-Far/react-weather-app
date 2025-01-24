@@ -1,11 +1,21 @@
 .ForecastDay {
   text-align: center;
-  font-size: 16px;
 }
-.ForecastDay .maxTemp,
-.forecastDate {
+.ForecastDay .maxTemp {
   color: #272142;
 }
-.ForecastDay .minTemp {
+.ForecastDay .minTemp,
+.forecastDate {
   color: #7f7d9c;
+}
+
+.ForecastDay .forecastDate {
+  font-size: 16px;
+  font-weight: 500px;
+}
+
+.ForecastDay .maxTemp,
+.minTemp {
+  font-size: 18px;
+  font-weight: 700px;
 }
